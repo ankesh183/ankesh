@@ -1,1 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ankesh Reddy | UI Developer</title>
 
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0f172a;
+  --card:#1e293b;
+  --accent:#38bdf8;
+  --muted:#94a3b8;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:var(--bg);
+  color:#fff;
+  scroll-behavior:smooth;
+}
+
+/* Navbar */
+nav{
+  position:sticky; top:0; z-index:1000;
+  background:rgba(15,23,42,.85);
+  backdrop-filter: blur(8px);
+  padding:12px 20px;
+  display:flex; justify-content:space-between; align-items:center;
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+nav a{
+  color:#fff; text-decoration:none; margin-left:16px; font-size:14px;
+}
+nav a:hover{ color:var(--accent); }
+
+/* Hero */
+header{
+  text-align:center;
+  padding:90px 20px 60px;
+  background:linear-gradient(180deg,#1e293b, #0f172a);
+}
+header h1{margin:0;font-size:38px}
+header p{color:var(--muted);margin-top:10px}
+.cta{
+  margin-top:20px;
+}
+.btn{
+  display:inline-block; padding:10px 18px; border-radius:8px;
+  background:var(--accent); color:#001018; text-decoration:none; font-weight:600;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.btn.secondary{
+  background:transparent; color:#fff; border:1px solid rgba(255,255,255,.2);
+}
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 20px rgba(56,189,248,.2);
+}
+
+/* Sections */
+section{
+  padding:60px 20px;
+  max-width:1100px; margin:auto;
+}
+h2{
+  border-bottom:2px solid var(--accent);
+  display:inline-block; padding-bottom:8px; margin-bottom:20px;
+}
+
+/* Cards / grids */
+.skills span{
+  display:inline-block; margin:6px; padding:8px 12px;
+  background:var(--card); border-radius:6px;
+}
+.projects{
+  display:grid; gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+}
+.card{
+  background:var(--card);
+  padding:16px; border-radius:12px;
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.card:hover{
+  transform:translateY(-6px) scale(1.01);
+  box-shadow:0 12px 30px rgba(0,0,0,.35);
+}
+.card a{ color:var(--accent); text-decoration:none }
+
+/* Timeline */
+.timeline{
+  border-left:2px solid rgba(255,255,255,.1);
+  padding-left:14px;
+}
+.timeline .item{
+  margin:10px 0;
+}
+
+/* Footer */
+footer{
+  text-align:center; padding:20px; background:#1e293b;
+}
+
+/* Scroll reveal */
+.reveal{
+  opacity:0; transform:translateY(30px);
+  transition:all .7s ease;
+}
+.reveal.active{
+  opacity:1; transform:translateY(0);
+}
+
+/* Small screens */
+@media(max-width:600px){
+  header h1{font-size:30px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div><b>Ankesh</b></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header>
+  <h1>Ankeshwar Reddy</h1>
+  <p id="type"></p>
+
+  <div class="cta">
+    <a class="btn" href="#projects">View Work</a>
+    <!-- add your resume file later -->
+    <a class="btn secondary" href="resume.pdf" target="_blank">Download Resume</a>
+  </div>
+</header>
+
+<section id="about" class="reveal">
+  <h2>About Me</h2>
+  <p>
+    UI Developer with 5+ years experience building responsive websites using
+    WordPress, HTML, CSS, Bootstrap & Figma. Worked on fintech, e-commerce
+    and corporate platforms with a focus on clean UX and performance.
+  </p>
+</section>
+
+<section id="skills" class="reveal">
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>HTML</span><span>CSS</span><span>Bootstrap</span>
+    <span>WordPress</span><span>Figma</span><span>Canva</span><span>JavaScript</span>
+  </div>
+</section>
+
+<section id="projects" class="reveal">
+  <h2>Projects</h2>
+  <div class="projects">
+
+    <div class="card">
+      <h3>Sampadha</h3>
+      <p>Financial platform website</p>
+      <a href="https://www.sampadha.com/" target="_blank">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>FinResearch India</h3>
+      <p>Financial services website</p>
+      <a href="https://www.finresearchindia.com/" target="_blank">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>FinFit India</h3>
+      <p>Financial literacy platform</p>
+      <a href="https://finfitindia.com/" target="_blank">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>Happi Mobiles</h3>
+      <p>E-commerce website</p>
+      <a href="https://www.happimobiles.com/" target="_blank">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>NeoTeq</h3>
+      <p>Software company website</p>
+      <a href="https://neo-teq.com/" target="_blank">View Project</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="experience" class="reveal">
+  <h2>Experience</h2>
+  <div class="timeline">
+    <div class="item">Neoteq Software (2022–Present)</div>
+    <div class="item">Endare Infotech (2018–2022)</div>
+    <div class="item">TechAADYS (2015–2018)</div>
+  </div>
+</section>
+
+<section id="contact" class="reveal">
+  <h2>Contact</h2>
+  <p>Email: ankeshreddy12@gmail.com</p>
+  <p>Phone: +91-9246033176</p>
+</section>
+
+<footer>
+  © 2026 Ankesh Reddy
+</footer>
+
+<script>
+// Scroll Reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){ e.target.classList.add('active'); }
+  });
+},{threshold:0.15});
+reveals.forEach(r=>observer.observe(r));
+
+// Typewriter
+const text = "UI Developer | 5+ Years Experience | WordPress | HTML | Bootstrap";
+let i=0;
+function type(){
+  if(i<text.length){
+    document.getElementById("type").innerHTML += text.charAt(i);
+    i++; setTimeout(type,40);
+  }
+}
+type();
+</script>
+
+</body>
+</html>
